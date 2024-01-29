@@ -46,7 +46,7 @@ export default function Footer() {
 						}
 					</ul>
 					<ul className={css.links}>
-						<li><h4>Links</h4></li>
+						{/* <li><h4>Links</h4></li>
 						{
 						content.links.map( ({ person, link, note }, index) => {
 							return (
@@ -56,7 +56,7 @@ export default function Footer() {
 								</li>
 							)
 						})
-						}
+						} */}
 					</ul>
 					<ul className={css.social}>
 						<li><h4>Social</h4></li>
@@ -74,14 +74,7 @@ export default function Footer() {
 				<section className={css.github}>
 					<a href={settings.portfolio.repo_html} rel="noreferrer" target="_blank">
 						<h5>{settings.portfolio.forkthis}</h5>
-						<ul>
-							<li>
-								<p><Icon icon={[ 'fad', 'code-branch' ]} /> Forks: { gitHubInfo.forks }</p>
-							</li>
-							<li>
-								<p><Icon icon={[ 'fad', 'star' ]} /> Stars: { gitHubInfo.stars }</p>
-							</li>
-						</ul>
+						<h5>DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR YOU.</h5>
 					</a>
 				</section>
 			</Container>

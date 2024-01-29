@@ -18,8 +18,8 @@ export default function FeaturedProjects() {
 			<Container spacing={'verticalXXXXLrg'}>
 				<SectionTitle
 					title="Featured Projects"
-					preTitle="UX and Full Stack"
-					subTitle="Focused on the experience, driven by the engineering."
+					preTitle="Mobile and Mern Stack"
+					subTitle="Crafting extraordinary experiences, fueled by an unstoppable wave of innovation."
 				/> 				{
 				content.map( (data, index) => {
 					return (
@@ -28,14 +28,14 @@ export default function FeaturedProjects() {
 				})
 				}
 			</Container>
-			<div className={css.bgContainer}>
+			{/* <div className={css.bgContainer}>
 				<span className={css.orbitalBg}>
 					<span class={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroLeft} ${css.heroOrbital}`}></span></span>
 					<span class={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroCenter}`}></span></span>
 					<span class={`${css.bgSection}`}><span className={`${css.bgInner} ${css.heroRight} ${css.heroOrbital}`}></span></span>
 				</span>
 				<span className={css.afterGlowBg}></span>
-			</div>
+			</div> */}
 		</Section>
 	)
 }
