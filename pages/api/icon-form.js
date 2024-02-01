@@ -13,7 +13,7 @@ export default function handler(req, res) {
 		return res.status(400).json({ data: 'Please fill out both fields' })
 	}
 	
-	// Found the name.
+	// Found the name.    F
 	// Sends a HTTP success code
 	res.status(200).json({ prefix: body.prefix, icon: body.icon })
 }

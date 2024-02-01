@@ -161,13 +161,13 @@ export default function Career() {
                 <h5>Karachi, Pakistan</h5>
               </span>
               <p>
-                I'm a assistant teacher at SMIT, helping students understand tech in an
-                easy way. We explore how to make computer things work and build
-                fun stuff. It's like having an adventure with technology every
-                day! Mixing class learning with doing things hands-on, I enjoy
-                making tech simple and exciting for these new minds. Teaching
-                here adds a bit of extra fun to my skill set, mixing school with
-                real-world tech play.
+                I'm a assistant teacher at SMIT, helping students understand
+                tech in an easy way. We explore how to make computer things work
+                and build fun stuff. It's like having an adventure with
+                technology every day! Mixing class learning with doing things
+                hands-on, I enjoy making tech simple and exciting for these new
+                minds. Teaching here adds a bit of extra fun to my skill set,
+                mixing school with real-world tech play.
               </p>
             </div>
             <div className={career.companyAlt}></div>

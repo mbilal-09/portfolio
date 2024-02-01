@@ -1,32 +1,32 @@
 {
-	"intro": {
-		"start": "const Bilal = ( name, passion ) =>",
-		"end": "Hello, my name is Muhammad Bilal",
-		"speed": 60,
-		"deletionSpeed": 80,
-		"wrapper": "h2",
-		"startDelay": 1000,
-		"deleteDelay": 3000,
-		"restartDelay": 12000
-	},
+  "intro": {
+    "start": "const Bilal = ( name, passion ) =>",
+    "end": "Hello, my name is Muhammad Bilal",
+    "speed": 60,
+    "deletionSpeed": 80,
+    "wrapper": "h2",
+    "startDelay": 1000,
+    "deleteDelay": 3000,
+    "restartDelay": 12000
+  },
 
-	"header": {
-		"name": "Muhammad Bilal.",
-		"usp": "I turn your visionary ideas into tangible reality."
-	},
+  "header": {
+    "name": "Muhammad Bilal.",
+    "usp": "I turn your visionary ideas into tangible reality."
+  },
 
-	"paragraph": "A dedicated Mern Stack Web Developer 🚀 with a strong passion for building cutting-edge Web and Mobile Applications.",
+  "paragraph": "A dedicated Mern Stack Web Developer 🚀 with a strong passion for building cutting-edge Web and Mobile Applications.",
 
-	"buttons": {
-		"primary": {
-			"title": "Contact Me",
-			"url": "bilalkhanshakir@gmail.com",
-			"leaveSite": false
-		},
-		"secondary": {
-			"title": "LinkedIn",
-			"url": "https://www.linkedin.com/in/bilal09/",
-			"leaveSite": "true"
-		}
-	}
+  "buttons": {
+    "primary": {
+      "title": "Contact Me",
+      "url": "bilalkhanshakir@gmail.com",
+      "leaveSite": false
+    },
+    "secondary": {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/bilal09/",
+      "leaveSite": "true"
+    }
+  }
 }

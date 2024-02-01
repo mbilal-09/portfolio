@@ -1,15 +1,15 @@
 {
-	"name": "Muhammad Bilal",
-	"logo": "",
-	
-	"username": {
-		"github": "mbilal-09",
-		"medium": ""
-	},
+  "name": "Muhammad Bilal",
+  "logo": "",
 
-	"portfolio": { 
-		"forkthis": "Thanks for giving your time.",
-		"repo_html": "",
-		"repo_api": ""
-	}
+  "username": {
+    "github": "mbilal-09",
+    "medium": ""
+  },
+
+  "portfolio": {
+    "forkthis": "Thanks for giving your time.",
+    "repo_html": "",
+    "repo_api": ""
+  }
 }

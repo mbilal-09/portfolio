@@ -1,44 +1,59 @@
 [
-	{
-		"project": "Promptopia",
-		"url": "https://promptopi.vercel.app/",
-		"repo": "Public",
-		"descriptionTitle": "Elevate your creative journey with Propmtopia",
-		"description": "turning ideas into vibrant realities through intelligent suggestions.",
-		"imageOptions": [
-		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "610", "w": "556", "url": "/img/msc-mock_stack/03.png" },
-			{ "key": "mock-stack",	"hover": "left",	"h": "610", "w": "556", "url": "/img/msc-mock_stack/01.png" }
-		],
-		"stack": [
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "nextjs", 	"name": "Next Js", 	"type": "devicon" },
-			{ "key": "mongodb", 	"name": "Mongo DB", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
-		]
-	},
-	{
-		"project": "Job Search",
-		"url": "https://github.com/mbilal-09/job-search-app",
-		"repo": "Public",
-		"descriptionTitle": "Land your dream job effortlessly with Job Search App",
-		"description": "simplifying the search and application process for your ideal job.",
-		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
-		],
-		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
-		],
-		"stack": [
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "react",    	"name": "React Native", "type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
-		]
-	}
+  {
+    "project": "Promptopia",
+    "url": "https://promptopi.vercel.app/",
+    "repo": "Public",
+    "descriptionTitle": "Elevate your creative journey with Propmtopia",
+    "description": "turning ideas into vibrant realities through intelligent suggestions.",
+    "imageOptions": [],
+    "images": [
+      {
+        "key": "mock-stack",
+        "hover": "right",
+        "h": "610",
+        "w": "556",
+        "url": "/img/msc-mock_stack/03.png"
+      },
+      {
+        "key": "mock-stack",
+        "hover": "left",
+        "h": "610",
+        "w": "556",
+        "url": "/img/msc-mock_stack/01.png"
+      }
+    ],
+    "stack": [
+      { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+      { "key": "nextjs", "name": "Next Js", "type": "devicon" },
+      { "key": "mongodb", "name": "Mongo DB", "type": "devicon" },
+      { "key": "html5", "name": "HTML5", "type": "devicon" },
+      { "key": "css3", "name": "CSS3", "type": "devicon" },
+      { "key": "git", "name": "Git(Hub)", "type": "devicon" }
+    ]
+  },
+  {
+    "project": "Job Search",
+    "url": "https://github.com/mbilal-09/job-search-app",
+    "repo": "Public",
+    "descriptionTitle": "Land your dream job effortlessly with Job Search App",
+    "description": "simplifying the search and application process for your ideal job.",
+    "imageOptions": [{ "key": "size", "value": "large" }],
+    "images": [
+      {
+        "key": "portfolio",
+        "hover": "left",
+        "h": "797",
+        "w": "556",
+        "url": "/img/portfolio-mock_single.png"
+      }
+    ],
+    "stack": [
+      { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+      { "key": "react", "name": "React Native", "type": "devicon" },
+      { "key": "html5", "name": "HTML5", "type": "devicon" },
+      { "key": "css3", "name": "CSS3", "type": "devicon" },
+      { "key": "sass", "name": "SCSS", "type": "devicon" },
+      { "key": "git", "name": "Git(Hub)", "type": "devicon" }
+    ]
+  }
 ]

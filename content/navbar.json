@@ -1,10 +1,10 @@
 [
-	{
-		"url": "/",
-		"title": "About Me"
-	},
-	{
-		"url": "/projects",
-		"title": "Projects"
-	}
+  {
+    "url": "/",
+    "title": "About Me"
+  },
+  {
+    "url": "/projects",
+    "title": "Projects"
+  }
 ]
