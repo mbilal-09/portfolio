@@ -53,7 +53,7 @@ export async function getServerSideProps({ res }) {
 		repos.sort( (a, b) => b.timestamp - a.timestamp )
 
 		repos = repos.filter( (e, i) => {
-			if ( i < 8 && ! e.topics.includes('github-config')) return e
+			if ( i < 12 && ! e.topics.includes('github-config')) return e
 			return false
 		})
 	}

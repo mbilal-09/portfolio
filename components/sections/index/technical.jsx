@@ -52,8 +52,8 @@ export default function Technical() {
               headerIcon={about.icon}
             />
             <BadgesBlock
-              title="Technologies I love to build with"
-              copy="I love tackling problems with code, whether it's making things look good on the front, sorting out the back, or connecting the dots with APIs. Every coding challenge is an opportunity, and I thrive on turning each one into a triumph."
+              title="Skills"
+              copy="I thrive on transforming challenges into triumphs through code. From front-end aesthetics to back-end optimization and API integrations, I'm equipped to tackle diverse coding tasks. Let's bring your ideas to life with creative and efficient solutions."
               list={tech}
               block="tech"
               fullContainer="fullContainer"

@@ -20,7 +20,7 @@ import career from "../../../styles/sections/index/career.module.scss";
  * @returns {jsx} <Career />
  */
 export default function Career() {
-  function calculateTimePassed() {
+  function digiAppTime() {
     const startDate = new Date("January 1, 2024");
     const currentDate = new Date();
 
@@ -44,7 +44,32 @@ export default function Career() {
     return { years, months, days };
   }
 
-  const timerData = calculateTimePassed();
+  function smitTime() {
+    const startDate = new Date("December 1, 2023");
+    const currentDate = new Date();
+
+    // Calculate the difference in milliseconds
+    const timeDifference = currentDate - startDate;
+
+    // Convert milliseconds to years, months, and days
+    const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
+    const years = Math.floor(timeDifference / millisecondsInYear);
+
+    const remainingMilliseconds = timeDifference % millisecondsInYear;
+    const millisecondsInMonth = 1000 * 60 * 60 * 24 * (365.25 / 12);
+    const months = Math.floor(remainingMilliseconds / millisecondsInMonth);
+
+    const remainingMillisecondsInMonth =
+      remainingMilliseconds % millisecondsInMonth;
+    const days = Math.floor(
+      remainingMillisecondsInMonth / (1000 * 60 * 60 * 24)
+    );
+
+    return { years, months, days };
+  }
+
+  const digiAppExpTime = digiAppTime();
+  const smitExpTime = smitTime();
 
   return (
     <Section classProp={`${career.section} borderBottom`}>
@@ -79,15 +104,70 @@ export default function Career() {
                 <h3>DigiApp Solutions</h3>
                 <h4>Junior Mern Stack Developer</h4>
                 <h4>
-                  Jan 2024 - Current · 
-                  {timerData.years > 0 ? ` ${timerData.years} year${timerData.years > 1 ? 's' : ''}` : ``}
-                  {timerData.months > 0 ? ` ${timerData.months} month${timerData.months > 1 ? 's' : ''}` : ``}
-                  {timerData.days > 0 ? ` ${timerData.days} day${timerData.days > 1 ? 's' : ''}` : ``}
+                  Jan 2024 - Current ·
+                  {digiAppExpTime.years > 0
+                    ? ` ${digiAppExpTime.years} year${
+                        digiAppExpTime.years > 1 ? "s" : ""
+                      }`
+                    : ``}
+                  {digiAppExpTime.months > 0
+                    ? ` ${digiAppExpTime.months} month${
+                        digiAppExpTime.months > 1 ? "s" : ""
+                      }`
+                    : ``}
+                  {digiAppExpTime.days > 0
+                    ? ` ${digiAppExpTime.days} day${
+                        digiAppExpTime.days > 1 ? "s" : ""
+                      }`
+                    : ``}
                 </h4>
                 <h5>Karachi, Pakistan</h5>
               </span>
               <p>
-			  As a Junior MERN Stack Developer at DigiApp Solutions, I developed and maintained web applications, specializing in MongoDB, Express.js, Next.js, and Node.js. I crafted seamless RESTful APIs, designed user-friendly interfaces with Next.js, and contributed to agile problem-solving, honing my full-stack development skills and reinforcing proficiency in the MERN stack.
+                As a Junior MERN Stack Developer at DigiApp Solutions, I
+                developed and maintained web applications, specializing in
+                MongoDB, Express.js, Next.js, and Node.js. I crafted seamless
+                RESTful APIs, designed user-friendly interfaces with Next.js,
+                and contributed to agile problem-solving, honing my full-stack
+                development skills and reinforcing proficiency in the MERN
+                stack.
+              </p>
+            </div>
+            <div className={career.companyAlt}></div>
+          </article>
+          <article className={career.company}>
+            <div className={career.companyContent}>
+              <span className={career.companyHeader}>
+                <h3>SMIT</h3>
+                <h4>Assistant Professor</h4>
+                <h4>
+                  Dec 2023 - Current ·
+                  {smitExpTime.years > 0
+                    ? ` ${smitExpTime.years} year${
+                        smitExpTime.years > 1 ? "s" : ""
+                      }`
+                    : ``}
+                  {smitExpTime.months > 0
+                    ? ` ${smitExpTime.months} month${
+                        smitExpTime.months > 1 ? "s" : ""
+                      }`
+                    : ``}
+                  {smitExpTime.days > 0
+                    ? ` ${smitExpTime.days} day${
+                        smitExpTime.days > 1 ? "s" : ""
+                      }`
+                    : ``}
+                </h4>
+                <h5>Karachi, Pakistan</h5>
+              </span>
+              <p>
+                I'm a assistant teacher at SMIT, helping students understand tech in an
+                easy way. We explore how to make computer things work and build
+                fun stuff. It's like having an adventure with technology every
+                day! Mixing class learning with doing things hands-on, I enjoy
+                making tech simple and exciting for these new minds. Teaching
+                here adds a bit of extra fun to my skill set, mixing school with
+                real-world tech play.
               </p>
             </div>
             <div className={career.companyAlt}></div>
