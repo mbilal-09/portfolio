@@ -90,21 +90,15 @@ const software = [
 ];
 
 const tech = [
-  { key: "html5", name: "HTML5", type: "devicon" },
-  { key: "css3", name: "CSS3", type: "devicon" },
   { key: "javascript", name: "JavaScript", type: "devicon" },
   { key: "typescript", name: "Typescript", type: "devicon" },
   { key: "react", name: "React", type: "devicon" },
   { key: "nextjs", name: "NextJS", type: "devicon" },
-  { key: "redux", name: "Redux", type: "devicon" },
   { key: "nodejs", name: "NodeJS", type: "devicon" },
   { key: "mongodb", name: "MongoDB", type: "devicon" },
   { key: "sass", name: "SASS", type: "devicon" },
-  { key: "git", name: "Git", type: "devicon" },
-  { key: "bootstrap", name: "Bootstrap", type: "devicon" },
   { key: "tailwindcss", name: "Tailwind CSS", type: "devicon" },
   { key: "firebase", name: "Firebase", type: "devicon" },
-  { key: "android", name: "Android", type: "devicon" },
   { key: "react", name: "React Native", type: "devicon" },
-  { key: "wordpress", name: "WordPress", type: "devicon" },
+  { key: "wordpress", name: "WordPress", type: "devicon" }
 ];

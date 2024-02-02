@@ -76,6 +76,7 @@
   --mesh-color-3: #4b3900;
   --mesh-color-4: #352400;
   color-scheme: dark;
+  --bg-gradient: radial-gradient(#443800a4, #241e00af, #131000a4, #000000);
 }
 
 :root[data-theme="light"],
@@ -95,10 +96,11 @@
   --neon-2-1: #c58000;
   --neon-2-2: #aa6f00;
   --icon-bright: var(--neon-1-1);
-  --mesh-color-1: #96c4f3;
-  --mesh-color-2: #96a8f2;
-  --mesh-color-3: #bad0ef;
-  --mesh-color-4: #c8ceda;
+  --mesh-color-1: #f8e4ae;
+  --mesh-color-2: #e7d3a6;
+  --mesh-color-3: #e6dbba;
+  --mesh-color-4: #dad6c8;
+  --bg-gradient: radial-gradient(#e6e3d7a4, #dbd6beaf, #d1cdb8a4, #ffffff);
 }
 
 :root[data-theme="unicorn"] {
@@ -121,4 +123,5 @@
   --mesh-color-2: #f296cc;
   --mesh-color-3: #efe2ba;
   --mesh-color-4: #c8d7da;
+  --bg-gradient: radial-gradient(#e6e3d7a4, #dbd6beaf, #d1cdb8a4, #ffffff);
 } /*# sourceMappingURL=variables.css.map */

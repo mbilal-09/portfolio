@@ -18,6 +18,8 @@ export default function Projects({ user, repos }) {
 	)
 }
 
+const reposNames = ['chat-app', 'promptopia', 'weather-app', 'blog-app', 'clock', 'echairs-backend', 'job-search-app', 'ecommerce_website'];
+
 // This gets called on every request
 export async function getServerSideProps({ res }) {
 
@@ -52,10 +54,7 @@ export async function getServerSideProps({ res }) {
 
 		repos.sort( (a, b) => b.timestamp - a.timestamp )
 
-		repos = repos.filter( (e, i) => {
-			if ( i < 12 && ! e.topics.includes('github-config')) return e
-			return false
-		})
+		repos = repos.filter( (e) => reposNames.includes(e.name))
 	}
 
 	if (!repos || !user) { return { notFound: true,	} }

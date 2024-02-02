@@ -165,5 +165,5 @@ a svg {
 } /*# sourceMappingURL=global.css.map */
 
 .hero_bg {
-  background: radial-gradient(#443800a4, #241e00af, #131000a4, #000000);
+  background: var(--bg-gradient);
 }
