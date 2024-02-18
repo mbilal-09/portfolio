@@ -30,7 +30,6 @@ export default function Hero() {
 
   return (
     <Section classProp={`${hero.section} hero_bg`}>
-      <div style={{ marginTop: 80 }}>
         <Container spacing={"VerticalXXXL"}>
           <TypeAnimation
             className={`${hero.preHeader}`}
@@ -72,9 +71,8 @@ export default function Hero() {
           </section>
           <section>
             <p
-              className={`${hero.primaryBright} subtitle ${space([
-                "verticalLrg",
-              ])}`}
+              className={`${hero.primaryBright} subtitle`}
+              style={{marginBottom:10, marginTop: 10}}
             >
               {content.paragraph}
             </p>
@@ -103,7 +101,6 @@ export default function Hero() {
           </section>
         </Container>
         {/* <HeroBg theme="bg-color-1" /> */}
-      </div>
     </Section>
   );
 }
