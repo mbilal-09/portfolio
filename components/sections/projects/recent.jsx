@@ -12,8 +12,8 @@ export default function GitProjects({ repos, user }) {
   return (
     <Section classProp={css.section}>
       <Container classProp={css.container} spacing={"verticalXXXLrg"}>
-        <h3>Recent Projects</h3>
-        <section className={css.profile}>
+        <h3 data-aos="fade-right" data-aos-delay="100">Recent Projects</h3>
+        <section className={css.profile} data-aos="fade-right" data-aos-delay="300">
           <Image
             className={css.profilePhoto}
             src={`${user[0].avatar_url}`}
@@ -48,7 +48,7 @@ export default function GitProjects({ repos, user }) {
               const date = new Date(pushed_at).toDateString();
               return (
                 <>
-                  <article key={index} className={css.project}>
+                  <article key={index} className={css.project} data-aos="zoom-in-up" data-aos-delay="200">
                     <span className={css.header}>
                       <a href={html_url} rel="noreferrer" target="_blank">
                         {name}{" "}

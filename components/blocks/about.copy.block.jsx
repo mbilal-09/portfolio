@@ -23,11 +23,11 @@ export default function CopyBlock({
   return (
     <>
       <div className={containerClass}>
-        <span className={iconClass}>
+        <span className={iconClass} data-aos="zoom-in" data-aos-delay="50">
           <Icon icon={icon} />
         </span>
-        <h3>{title}</h3>
-        <p>{copy}</p>
+        <h3 data-aos="zoom-in" data-aos-delay="200">{title}</h3>
+        <p data-aos="zoom-in" data-aos-delay="400">{copy}</p>
       </div>
     </>
   );

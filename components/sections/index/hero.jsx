@@ -30,66 +30,80 @@ export default function Hero() {
 
   return (
     <Section classProp={`${hero.section} hero_bg`}>
-      <Container spacing={"VerticalXXXL"}>
-        <TypeAnimation
-          className={`${hero.preHeader}`}
-          sequence={[
-            content.intro.startDelay,
-            () => {
-              setTypingStatus("typing");
-            },
-            content.intro.start,
-            () => {
-              setTypingStatus("typed");
-            },
-            content.intro.deleteDelay,
-            () => {
-              setTypingStatus("deleting");
-            },
-            content.intro.end,
-            () => {
-              setTypingStatus("deleted");
-            },
-            content.intro.restartDelay,
-          ]}
-          speed={content.intro.speed}
-          deletionSpeed={content.intro.deletionSpeed}
-          wrapper={content.intro.wrapper}
-          repeat={Infinity}
-        />
-        <section>
-          <h1 className={hero.header}>{content.header.name}</h1>
-          <h1 className={`${hero.header} ${hero.primaryDim}`}>
-            {content.header.usp}
-          </h1>
-        </section>
-        <section>
-          <p
-            className={`${hero.primaryBright} subtitle ${space([
-              "verticalLrg",
-            ])}`}
-          >
-            {content.paragraph}
-          </p>
-        </section>
-        <section>
-          <button
-            className={`button ${button.primary}`}
-            onClick={() =>
-              (window.location = `mailto:${content.buttons.primary.url}`)
-            }
-          >
-            {content.buttons.primary.title}
-          </button>
-          <button
-            className={`button ${button.secondary} leaveSite`}
-            onClick={() => window.open(content.buttons.secondary.url, "_blank")}
-          >
-            {content.buttons.secondary.title}
-          </button>
-        </section>
-      </Container>
-      {/* <HeroBg theme="bg-color-1" /> */}
+      <div style={{ marginTop: 80 }}>
+        <Container spacing={"VerticalXXXL"}>
+          <TypeAnimation
+            className={`${hero.preHeader}`}
+            sequence={[
+              content.intro.startDelay,
+              () => {
+                setTypingStatus("typing");
+              },
+              content.intro.start,
+              () => {
+                setTypingStatus("typed");
+              },
+              content.intro.deleteDelay,
+              () => {
+                setTypingStatus("deleting");
+              },
+              content.intro.end,
+              () => {
+                setTypingStatus("deleted");
+              },
+              content.intro.restartDelay,
+            ]}
+            speed={content.intro.speed}
+            deletionSpeed={content.intro.deletionSpeed}
+            wrapper={content.intro.wrapper}
+            repeat={Infinity}
+          />
+          <section>
+            <h1 className={hero.header} data-aos="fade-up" data-aos-delay="50">
+              {content.header.name}
+            </h1>
+            <h1
+              className={`${hero.header} ${hero.primaryDim}`}
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              {content.header.usp}
+            </h1>
+          </section>
+          <section>
+            <p
+              className={`${hero.primaryBright} subtitle ${space([
+                "verticalLrg",
+              ])}`}
+            >
+              {content.paragraph}
+            </p>
+          </section>
+          <section>
+            <button
+              className={`button ${button.primary}`}
+              onClick={() =>
+                (window.location = `mailto:${content.buttons.primary.url}`)
+              }
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              {content.buttons.primary.title}
+            </button>
+            <button
+              className={`button ${button.secondary} leaveSite`}
+              onClick={() =>
+                window.open(content.buttons.secondary.url, "_blank")
+              }
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              {content.buttons.secondary.title}
+            </button>
+          </section>
+        </Container>
+        {/* <HeroBg theme="bg-color-1" /> */}
+      </div>
     </Section>
   );
 }

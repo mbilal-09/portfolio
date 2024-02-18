@@ -32,12 +32,12 @@ export default function Footer() {
       <Container spacing={["verticalXXLrg", "bottomLrg"]}>
         <section className={css.sections}>
           <ul className={css.thanks}>
-            <li>
+            <li data-aos="fade-right" data-aos-delay="100">
               <h4>Acknowledgments</h4>
             </li>
             {content.acknowledgments.map(({ person, link, note }, index) => {
               return (
-                <li key={index}>
+                <li key={index} data-aos="fade-right" data-aos-delay="300">
                   <a href={link} rel="noreferrer" target="_blank">
                     {person}{" "}
                     <Icon icon={["fad", "arrow-up-right-from-square"]} />
@@ -61,10 +61,10 @@ export default function Footer() {
 						} */}
           </ul>
           <ul className={css.social}>
-            <li>
+            <li data-aos="fade-right" data-aos-delay="100">
               <h4>Social</h4>
             </li>
-            <li className={css.socialList}>
+            <li className={css.socialList} data-aos="fade-right" data-aos-delay="300">
               {content.social.map(({ url, icon }, index) => {
                 return (
                   <a key={index} href={url} rel="noreferrer" target="_blank">
@@ -76,11 +76,7 @@ export default function Footer() {
           </ul>
         </section>
         <section className={css.github}>
-          <a
-            href={settings.portfolio.repo_html}
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a>
             <h5>{settings.portfolio.forkthis}</h5>
             <h5>
               DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR

@@ -80,7 +80,7 @@ export default function Career() {
           subTitle="Merning the Digital Canvas: Crafting Seamless Experiences, Line by Line."
         />
         <section className={career.area}>
-          <article className={career.company}>
+          <article className={career.company} data-aos="zoom-out-up">
             <div className={career.companyContent}>
               <span className={career.companyHeader}>
                 <h3>BNG Labs</h3>
@@ -98,7 +98,7 @@ export default function Career() {
             </div>
             <div className={career.companyAlt}></div>
           </article>
-          <article className={career.company}>
+          <article className={career.company} data-aos="zoom-out-up">
             <div className={career.companyContent}>
               <span className={career.companyHeader}>
                 <h3>DigiApp Solutions</h3>
@@ -135,7 +135,7 @@ export default function Career() {
             </div>
             <div className={career.companyAlt}></div>
           </article>
-          <article className={career.company}>
+          <article className={career.company} data-aos="zoom-out-up">
             <div className={career.companyContent}>
               <span className={career.companyHeader}>
                 <h3>SMIT</h3>

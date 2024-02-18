@@ -25,6 +25,12 @@ import "../node_modules/devicon/devicon.min.css";
 import "../styles/css/variables.css";
 import "../styles/css/global.css";
 
+//aos
+
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 /**
  * _app.jsx
  *
@@ -33,6 +39,11 @@ import "../styles/css/global.css";
  * @returns
  */
 export default function MyApp({ Component, pageProps }) {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
   return (
     <>
       <LazyMotion features={domAnimation}>

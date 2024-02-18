@@ -16,10 +16,10 @@ export default function BadgesBlock({
 }) {
   return (
     <div className={`${badges.badgeBlockContainer} ${containerClass}`}>
-      <span className={headerIcon}>
+      <span className={headerIcon} data-aos="zoom-in" data-aos-delay="100">
         <Icon icon={["fat", icon]} />
       </span>
-      <h3>{title}</h3>
+      <h3 data-aos="zoom-in" data-aos-delay="300">{title}</h3>
       <Copy copy={copy} />
       <Badges
         list={list}
@@ -32,5 +32,5 @@ export default function BadgesBlock({
 }
 
 function Copy({ copy }) {
-  if (copy) return <p>{copy}</p>;
+  if (copy) return <p data-aos="zoom-in" data-aos-delay="500">{copy}</p>;
 }

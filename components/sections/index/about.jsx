@@ -33,7 +33,12 @@ export default function About() {
           subTitle="An inquisitive Mern Stack Developer on a mission to conquer every tech stack with a touch of madness and a lot of innovation."
         />
         <section className={about.content}>
-          <div className={about.image}>
+          <div
+            className={about.image}
+            data-aos="flip-left"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
             <img src="/img/profile-photo.jpg" alt="Nelson family photo" />
             {/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
           </div>

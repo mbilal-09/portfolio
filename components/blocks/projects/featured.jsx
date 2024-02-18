@@ -48,7 +48,7 @@ export default function FeaturedProject({ content }, index) {
       whileHover="hover"
       animate={controls}
     >
-      <div className={css.details}>
+      <div className={css.details} data-aos="fade-right">
         <div className={css.projectHeader}>
           <div className={css.header}>
             <h3 className="highlight">{project}</h3>
@@ -76,7 +76,7 @@ export default function FeaturedProject({ content }, index) {
         </div>
       </div>
 
-      <div className={css.imageContainer}>
+      <div className={css.imageContainer} data-aos="fade-left" style={{marginTop:  20}}>
         <span className={`${css.imageAnimationContainer}`}>
           {images.map(({ key, url, hover, h, w }, index) => {
             hover = hover === "left" ? hoverLeft : hoverRight;
