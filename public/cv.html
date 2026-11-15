@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Muhammad Bilal — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Rethink+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: A4;
+        margin: 11mm 14mm 12mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: #ffffff;
+        color: #111111;
+        font-family: "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+        font-weight: 700;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      main {
+        width: 210mm;
+        margin: 0 auto;
+        padding: 11mm 14mm 12mm;
+        background: #ffffff;
+      }
+
+      @media print {
+        main {
+          width: auto;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .row,
+      .project {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .break-before {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #d8d8de;
+        border-radius: 999px;
+        padding: 1.2mm 3mm;
+        font-size: 8px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #3a3a40;
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: -0.055em;
+        line-height: 0.95;
+      }
+
+      .role {
+        margin-top: 1.2mm;
+        font-family: "Inter Tight", sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: #6b6b73;
+      }
+
+      .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4mm 4.5mm;
+        margin-top: 3.4mm;
+        font-size: 10.5px;
+        color: #111111;
+      }
+
+      .contacts a,
+      .contacts span {
+        display: inline-flex;
+        align-items: center;
+        gap: 1.3mm;
+      }
+
+      .contacts svg {
+        width: 3.3mm;
+        height: 3.3mm;
+        flex: none;
+      }
+
+      .summary {
+        max-width: 172mm;
+        margin-top: 3.8mm;
+        font-size: 11px;
+        line-height: 1.5;
+        color: #5e5e66;
+      }
+
+      .summary + .summary {
+        margin-top: 2mm;
+      }
+
+      section {
+        margin-top: 5.5mm;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 40mm 1fr;
+        gap: 4mm;
+        padding: 2.7mm 0;
+        border-bottom: 1px solid #e6e6ea;
+      }
+
+      .row:last-child {
+        border-bottom: 0;
+      }
+
+      .when {
+        font-size: 10px;
+        color: #5e5e66;
+        padding-top: 0.4mm;
+      }
+
+      h3 {
+        font-size: 13px;
+        letter-spacing: -0.03em;
+      }
+
+      .meta {
+        margin-top: 0.4mm;
+        font-size: 10.5px;
+        color: #5e5e66;
+      }
+
+      .detail {
+        margin: 1.2mm 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .detail li {
+        position: relative;
+        padding-left: 3mm;
+        font-size: 10.5px;
+        line-height: 1.4;
+        color: #5e5e66;
+      }
+
+      .detail li + li {
+        margin-top: 0.6mm;
+      }
+
+      .detail li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1.6mm;
+        width: 1.1mm;
+        height: 1.1mm;
+        border-radius: 999px;
+        background: rgba(17, 17, 17, 0.45);
+      }
+
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4mm;
+        margin-top: 3mm;
+      }
+
+      .pill {
+        border: 1px solid #dcdce1;
+        background: #f6f6f7;
+        border-radius: 999px;
+        padding: 1.1mm 2.6mm;
+        font-size: 10px;
+      }
+
+      .project {
+        padding: 1.7mm 0;
+        border-bottom: 1px solid #e6e6ea;
+      }
+
+      .project:last-child {
+        border-bottom: 0;
+      }
+
+      .project h3 {
+        font-size: 12.5px;
+      }
+
+      .project .meta {
+        margin-top: 0.3mm;
+      }
+
+      .project p {
+        margin: 0.5mm 0 0;
+        font-size: 10.5px;
+        line-height: 1.4;
+        color: #5e5e66;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4mm;
+        margin-top: 1mm;
+      }
+
+      .links a {
+        border: 1px solid #d8d8de;
+        border-radius: 999px;
+        padding: 0.6mm 2.2mm;
+        font-size: 9.5px;
+        font-weight: 600;
+        color: #111111;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Muhammad Bilal</h1>
+      <p class="role">Full Stack Developer</p>
+      <p class="contacts">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+            <circle cx="12" cy="10" r="2.4" />
+          </svg>
+          Karachi, Pakistan
+        </span>
+        <a href="mailto:bilalkhanshakir@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="m3 7 9 7 9-7" />
+          </svg>
+          bilalkhanshakir@gmail.com
+        </a>
+        <a href="https://mbilal.vercel.app/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+          </svg>
+          mbilal.vercel.app
+        </a>
+        <a href="https://github.com/mbilal-09">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z" />
+          </svg>
+          github.com/mbilal-09
+        </a>
+        <a href="https://www.linkedin.com/in/m-bilaal/">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM10 9h3.8v1.64h.05c.53-1 1.82-2.06 3.75-2.06 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H10z" />
+          </svg>
+          linkedin.com/in/m-bilaal
+        </a>
+        <a href="https://wa.me/923100057569">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" />
+          </svg>
+          0310 0057569
+        </a>
+      </p>
+      <p class="summary">
+        I'm M. Bilal, a Full Stack Developer with 3 years of professional experience building web and
+        mobile applications. I turn ideas into practical products that are simple to use, visually
+        clear, and reliable. Most of my work is frontend — clean interfaces and smooth flows — and I
+        also work on APIs, backend, and databases.
+      </p>
+      <p class="summary">
+        I work with JavaScript, TypeScript, React, Next.js, React Native, Flutter, Node.js, and
+        Firebase. Alongside this, I'm pursuing a Bachelor's degree in Computer Science.
+      </p>
+
+      <section>
+        <p class="kicker">Experience · 01</p>
+        <div class="row">
+          <p class="when">May 2024 — Present</p>
+          <div>
+            <h3>Mid-Level Full Stack Developer</h3>
+            <p class="meta">DigiTrends · Full-time · On-site</p>
+            <ul class="detail">
+              <li>
+                Build and maintain web and mobile applications using React Native, Flutter, React.js,
+                Next.js, and Vite.
+              </li>
+              <li>Work with the team to develop new features, improve performance, and maintain code quality.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <p class="when">Jan 2024 — May 2024</p>
+          <div>
+            <h3>Junior Full Stack Developer</h3>
+            <p class="meta">DigiApp Solutions · Full-time · On-site</p>
+            <ul class="detail">
+              <li>Developed web and mobile applications using React, Node.js, and MongoDB.</li>
+              <li>Built responsive user interfaces and backend APIs to support application features.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <p class="when">Oct 2023 — Dec 2023</p>
+          <div>
+            <h3>MERN Stack Intern</h3>
+            <p class="meta">BNG Labs · Internship · Remote</p>
+            <ul class="detail">
+              <li>Worked on web application features using React, Node.js, and MongoDB.</li>
+              <li>Collaborated with the development team to build and improve real-world applications.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <p class="kicker">Stack · 02</p>
+        <div class="pills">
+          <span class="pill">Product delivery</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">React</span>
+          <span class="pill">Vite</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">React Native</span>
+          <span class="pill">Flutter</span>
+          <span class="pill">Dart</span>
+          <span class="pill">Node.js</span>
+          <span class="pill">Express</span>
+          <span class="pill">OpenAI</span>
+          <span class="pill">Gemini</span>
+          <span class="pill">Firebase</span>
+          <span class="pill">Redux Toolkit</span>
+          <span class="pill">SignalR</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">CI/CD</span>
+          <span class="pill">RevenueCat</span>
+        </div>
+      </section>
+
+      <section>
+        <p class="kicker">Projects · 03</p>
+        <article class="project">
+          <h3>Jadwa Investment</h3>
+          <p class="meta">Saudi fintech</p>
+          <p>
+            A Saudi app for Shariah-compliant investing. People see their portfolio, subscribe to funds
+            and redeem them, trade on the Saudi Exchange, move money in riyal and dollars, and open
+            statements.
+          </p>
+          <p class="links">
+            <a href="https://portal.jadwa.com/">Web</a>
+            <a href="https://play.google.com/store/apps/details?id=jadwa.invest.app">Android</a>
+            <a href="https://apps.apple.com/sa/app/jadwa-investment/id6474286972">iOS</a>
+          </p>
+        </article>
+        <article class="project">
+          <h3>EctoTrack</h3>
+          <p class="meta">Construction</p>
+          <p>
+            For construction teams working across more than one site. Inventory, vehicles, and purchasing
+            stay in one place, so the site and the office look at the same records.
+          </p>
+          <p class="links"><a href="https://ectotrack.com/">Web</a></p>
+        </article>
+        <article class="project">
+          <h3>Ask Me Anything</h3>
+          <p class="meta">AI assistant</p>
+          <p>
+            A chat app powered by OpenAI. It answers questions and writes essays, emails, and short copy,
+            with weekly, monthly, and yearly plans inside the app.
+          </p>
+          <p class="links">
+            <a href="https://apps.apple.com/us/app/ask-me-anything-ai-assistant/id1667766826">iOS</a>
+          </p>
+        </article>
+        <article class="project break-before">
+          <h3>Dream Meaning PRO</h3>
+          <p class="meta">AI</p>
+          <p>
+            You write down a dream and the app explains the symbols with OpenAI. It also has a dream
+            dictionary and paid plans.
+          </p>
+          <p class="links">
+            <a href="https://apps.apple.com/us/app/dream-meaning-pro/id6447387536">iOS</a>
+          </p>
+        </article>
+        <article class="project">
+          <h3>Dono Volunteering</h3>
+          <p class="meta">Volunteering</p>
+          <p>
+            Connects students, nonprofits, and local businesses. A student can pick up donated food,
+            follow a route, and get their hours logged.
+          </p>
+          <p class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.dono">Android</a>
+            <a href="https://apps.apple.com/us/app/dono-volunteering/id6478546455">iOS</a>
+          </p>
+        </article>
+        <article class="project">
+          <h3>GI Connect</h3>
+          <p class="meta">Medical</p>
+          <p>
+            A website for gastroenterology professionals in Pakistan. Guidelines, lectures, research, and
+            a community for events and other people in the field.
+          </p>
+          <p class="links"><a href="https://gi-connects.com/">Web</a></p>
+        </article>
+        <article class="project">
+          <h3>Pharma Asia</h3>
+          <p class="meta">Conference</p>
+          <p>The companion app for the Pharma Asia conference. Visitors look up exhibitors, speakers, and sessions.</p>
+          <p class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.pharmaasia">Android</a>
+            <a href="https://apps.apple.com/us/app/pharma-asia/id6755405385">iOS</a>
+          </p>
+        </article>
+        <article class="project">
+          <h3>Build Asia</h3>
+          <p class="meta">Conference</p>
+          <p>
+            The companion app for Pakistan’s construction and real estate exhibition. It has the schedule,
+            a floor plan, the exhibitor list, and chat.
+          </p>
+          <p class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.buildasia">Android</a>
+            <a href="https://apps.apple.com/in/app/build-asia/id6757343371">iOS</a>
+          </p>
+        </article>
+        <article class="project">
+          <h3>Health Asia</h3>
+          <p class="meta">Conference</p>
+          <p>
+            The companion app for the Health Asia exhibition in Karachi. It has the schedule, speakers,
+            exhibitors, a map, and chat.
+          </p>
+          <p class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.conference.dt">Android</a>
+            <a href="https://apps.apple.com/us/app/health-asia/id6753916797">iOS</a>
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <p class="kicker">Education · 04</p>
+        <div class="row">
+          <p class="when">2024 — Expected 2028</p>
+          <div>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="meta">Sir Syed University of Engineering and Technology · Karachi</p>
+          </div>
+        </div>
+        <div class="row">
+          <p class="when">2022 — 2023</p>
+          <div>
+            <h3>Web and Mobile Development</h3>
+            <p class="meta">Saylani Mass IT Training</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
