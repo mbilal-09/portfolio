@@ -6,7 +6,7 @@ const frames = [
 
 export default function ProjectCard({ item, featured, frame, compact }) {
   return (
-    <article className={`min-w-0 ${featured ? "md:col-span-2" : ""}`}>
+    <article className="min-w-0">
       <div
         className={`relative overflow-hidden rounded-3xl border border-white/10 bg-surface ${
           featured ? "aspect-[16/8]" : "aspect-[4/3]"

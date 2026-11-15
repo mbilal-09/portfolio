@@ -1,5 +1,6 @@
 import { site } from "../content"
 import Industries from "./Industries"
+import Reveal from "./Reveal"
 import SectionHeading from "./SectionHeading"
 
 export default function Skills() {
@@ -9,15 +10,19 @@ export default function Skills() {
         <div className="pointer-events-none absolute top-20 bottom-20 left-1/2 hidden w-px -translate-x-1/2 bg-line sm:top-28 sm:bottom-28 md:block" />
         <div className="grid gap-16 md:grid-cols-2 md:items-start md:gap-0">
           <div className="md:pr-16">
-            <SectionHeading index="02" title="Stack" />
+            <Reveal>
+              <SectionHeading index="02" title="Stack" />
+            </Reveal>
             <ul className="mt-8 flex flex-wrap gap-2">
-              {site.skills.map((item) => (
-                <li
+              {site.skills.map((item, index) => (
+                <Reveal
+                  as="li"
                   key={item}
+                  delay={Math.min(index * 35, 320)}
                   className="rounded-full border border-white/15 bg-canvas px-3 py-1.5 text-sm"
                 >
                   {item}
-                </li>
+                </Reveal>
               ))}
             </ul>
           </div>
