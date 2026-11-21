@@ -8,8 +8,10 @@ export default function SmoothScroll() {
 
     const lenis = new Lenis({
       autoRaf: true,
-      lerp: 0.08,
+      lerp: 0.09,
       smoothWheel: true,
+      anchors: true,
+      wheelMultiplier: 0.95,
     })
 
     return () => lenis.destroy()

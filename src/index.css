@@ -13,6 +13,7 @@
 
 html {
   color-scheme: dark;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
@@ -67,11 +68,11 @@ html.has-glass-cursor * {
   -webkit-backdrop-filter: blur(10px);
   opacity: 0;
   pointer-events: none;
-  will-change: transform;
+  will-change: transform, width, height;
   transition:
-    background 0.5s ease,
-    border-color 0.5s ease,
-    box-shadow 0.5s ease;
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .glass-cursor.is-clear {
@@ -90,51 +91,95 @@ html.has-glass-cursor * {
 
 .js .reveal {
   opacity: 0;
-  transform: translate3d(0, 32px, 0);
+  transform: translate3d(0, 18px, 0);
   transition:
-    opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.05s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
 }
 
 .js .reveal[data-lift="blur"] {
-  filter: blur(12px);
-  transform: translate3d(0, 22px, 0);
+  filter: blur(8px);
+  transform: translate3d(0, 14px, 0);
 }
 
 .js .reveal[data-lift="image"] {
-  transform: translate3d(0, 28px, 0) scale(0.96);
+  transform: translate3d(0, 16px, 0) scale(0.97);
 }
 
 .js .reveal.is-in {
   opacity: 1;
-  transform: none;
-  filter: none;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
 }
 
 .js .tech-pills {
   opacity: 0;
-  transform: translate3d(0, 12px, 0);
+  transform: translate3d(0, 8px, 0);
 }
 
 .js .reveal.is-in .tech-pills {
-  animation: tech-pills-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+  animation: tech-pills-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
 }
 
 @keyframes tech-pills-in {
   from {
     opacity: 0;
-    transform: translate3d(0, 12px, 0);
+    transform: translate3d(0, 8px, 0);
   }
   to {
     opacity: 1;
-    transform: none;
+    transform: translate3d(0, 0, 0);
   }
 }
 
+.tagline-word {
+  display: inline;
+  animation: tagline-swap 0.4s ease both;
+}
+
+@keyframes tagline-swap {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.row-wash {
+  position: relative;
+}
+
+.row-wash::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035) 46%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.row-wash:hover::before {
+  opacity: 1;
+}
+
+.row-wash > * {
+  position: relative;
+  z-index: 1;
+}
+
+.orb-drift {
+  animation: orb-drift 18s ease-in-out infinite;
+}
+
 .hero-wash {
-  animation: hero-wash 10s ease-in-out infinite;
+  animation: hero-wash 14s ease-in-out infinite;
 }
 
 @keyframes hero-wash {
@@ -143,7 +188,17 @@ html.has-glass-cursor * {
     transform: translateX(-50%) scale(1);
   }
   50% {
-    transform: translateX(-50%) scale(1.08);
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+@keyframes orb-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(28px, 16px, 0);
   }
 }
 
@@ -164,7 +219,12 @@ html.has-glass-cursor * {
     animation: none;
   }
 
-  .hero-wash {
+  .tagline-word {
+    animation: none;
+  }
+
+  .hero-wash,
+  .orb-drift {
     animation: none;
   }
 }

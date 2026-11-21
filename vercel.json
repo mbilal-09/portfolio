@@ -4,10 +4,11 @@
   "installCommand": "yarn install",
   "buildCommand": "yarn build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/((?!assets/|work/)[^.]+)",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }

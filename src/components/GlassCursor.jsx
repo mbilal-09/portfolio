@@ -29,15 +29,15 @@ export default function GlassCursor() {
       }
       const target = event.target
       const interactive =
-        target instanceof Element && target.closest("a, button")
+        target instanceof Element && target.closest("a, button, .tagline")
       scale = interactive ? 2.15 : 1
       node.classList.toggle("is-clear", Boolean(interactive))
     }
 
     const tick = () => {
-      cx += (x - cx) * 0.18
-      cy += (y - cy) * 0.18
-      current += (scale - current) * 0.18
+      cx += (x - cx) * 0.22
+      cy += (y - cy) * 0.22
+      current += (scale - current) * 0.2
       const size = 46 * current
       node.style.width = `${size}px`
       node.style.height = `${size}px`

@@ -22,7 +22,7 @@
       html,
       body {
         margin: 0;
-        background: #ffffff;
+        background: #f3f3f5;
         color: #111111;
         font-family: "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
         -webkit-print-color-adjust: exact;
@@ -42,18 +42,36 @@
         text-decoration: none;
       }
 
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
       main {
         width: 210mm;
-        margin: 0 auto;
+        min-height: 297mm;
+        margin: 12mm auto;
         padding: 11mm 14mm 12mm;
         background: #ffffff;
+        box-shadow: 0 12px 40px rgba(17, 17, 17, 0.08);
       }
 
       @media print {
+        html,
+        body {
+          background: #ffffff;
+        }
+
         main {
           width: auto;
+          min-height: 0;
           margin: 0;
           padding: 0;
+          box-shadow: none;
+        }
+
+        a:hover {
+          text-decoration: none;
         }
       }
 
@@ -66,6 +84,11 @@
       .break-before {
         break-before: page;
         page-break-before: always;
+      }
+
+      .header {
+        padding-bottom: 3.5mm;
+        border-bottom: 1px solid #e6e6ea;
       }
 
       .kicker {
@@ -95,6 +118,20 @@
         font-weight: 700;
         letter-spacing: -0.04em;
         color: #6b6b73;
+      }
+
+      .tagline {
+        margin: 2.2mm 0 0;
+        font-family: "Inter Tight", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        color: #111111;
+      }
+
+      .tagline span {
+        color: #8a8a92;
+        font-weight: 600;
       }
 
       .contacts {
@@ -139,7 +176,7 @@
         display: grid;
         grid-template-columns: 40mm 1fr;
         gap: 4mm;
-        padding: 2mm 0;
+        padding: 2.2mm 0;
         border-bottom: 1px solid #e6e6ea;
       }
 
@@ -232,7 +269,7 @@
       }
 
       .project {
-        padding: 1.2mm 0;
+        padding: 1.6mm 0;
         border-bottom: 1px solid #e6e6ea;
       }
 
@@ -269,64 +306,74 @@
         font-size: 9.5px;
         font-weight: 600;
         color: #111111;
+        text-decoration: none;
+      }
+
+      .links a:hover {
+        background: #111111;
+        border-color: #111111;
+        color: #ffffff;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>Muhammad Bilal</h1>
-      <p class="role">Mid-Level Full Stack Developer | Frontend Specialist</p>
-      <p class="contacts">
-        <span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
-            <circle cx="12" cy="10" r="2.4" />
-          </svg>
-          Karachi, Pakistan
-        </span>
-        <a href="mailto:bilalkhanshakir@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <path d="m3 7 9 7 9-7" />
-          </svg>
-          bilalkhanshakir@gmail.com
-        </a>
-        <a href="https://mbilal.vercel.app/">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" />
-            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
-          </svg>
-          mbilal.vercel.app
-        </a>
-        <a href="https://github.com/mbilal-09">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z" />
-          </svg>
-          github.com/mbilal-09
-        </a>
-        <a href="https://www.linkedin.com/in/m-bilaal/">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM10 9h3.8v1.64h.05c.53-1 1.82-2.06 3.75-2.06 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H10z" />
-          </svg>
-          linkedin.com/in/m-bilaal
-        </a>
-        <a href="https://wa.me/923100057569">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" />
-          </svg>
-          0310 0057569
-        </a>
-      </p>
-      <p class="summary">
-        I turn your visionary ideas into tangible reality. I'm M. Bilal, a Full Stack Developer with 3
-        years of professional experience building web and mobile applications. I turn ideas into
-        practical products that are simple to use, visually clear, and reliable. Most of my work is
-        frontend — clean interfaces and smooth flows — and I also work on APIs, backend, and databases.
-      </p>
-      <p class="summary">
-        I work with JavaScript, TypeScript, React, Next.js, React Native, Flutter, Node.js, and
-        Firebase. Alongside this, I'm pursuing a Bachelor's degree in Computer Science.
-      </p>
+      <header class="header">
+        <h1>Muhammad Bilal</h1>
+        <p class="role">Mid-Level Full Stack Developer | Frontend Specialist</p>
+        <p class="tagline">I ship <span>ideas</span> into <span>apps</span>.</p>
+        <p class="contacts">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+              <circle cx="12" cy="10" r="2.4" />
+            </svg>
+            Karachi, Pakistan
+          </span>
+          <span>Open to work</span>
+          <a href="mailto:bilalkhanshakir@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 7 9-7" />
+            </svg>
+            bilalkhanshakir@gmail.com
+          </a>
+          <a href="https://mbilal.vercel.app/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+            </svg>
+            mbilal.vercel.app
+          </a>
+          <a href="https://github.com/mbilal-09">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86v2.76c0 .26.18.58.69.48A10 10 0 0 0 12 2z" />
+            </svg>
+            github.com/mbilal-09
+          </a>
+          <a href="https://www.linkedin.com/in/m-bilaal/">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM10 9h3.8v1.64h.05c.53-1 1.82-2.06 3.75-2.06 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H10z" />
+            </svg>
+            linkedin.com/in/m-bilaal
+          </a>
+          <a href="https://wa.me/923100057569">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L7.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" />
+            </svg>
+            0310 0057569
+          </a>
+        </p>
+        <p class="summary">
+          Full Stack Developer with 3 years building web and mobile apps. Frontend-focused — clean
+          interfaces and smooth flows — with solid work across APIs, backend, and databases.
+        </p>
+        <p class="summary">
+          JavaScript, TypeScript, React, Next.js, React Native, Flutter, Node.js, and Firebase.
+          Currently pursuing a Bachelor's in Computer Science.
+        </p>
+      </header>
 
       <section>
         <p class="kicker">Experience · 01</p>
@@ -337,14 +384,18 @@
             <p class="meta">DigiTrends · Full-time · On-site</p>
             <ul class="detail">
               <li>
-                Build and maintain web and mobile applications using React Native, Flutter, React.js,
-                Next.js, and Vite.
+                Built Jadwa Investment’s frontend on web and React Native: live prices and trading over
+                SignalR, fund subscribe and redeem, portfolio and statements, and riyal and dollar
+                transfers.
               </li>
-              <li>Work with the team to develop new features, improve performance, and maintain code quality.</li>
+              <li>
+                Shipped Dono Volunteering, GI Connect, and the Pharma Asia, Build Asia, and Health Asia
+                conference apps.
+              </li>
             </ul>
             <p class="tech">
-              <span>Next.js</span><span>Vite</span><span>React Native</span>
-              <span>Firebase</span><span>Flutter</span><span>TypeScript</span>
+              <span>React.js</span><span>Next.js</span><span>Vite</span><span>React Native</span>
+              <span>SignalR</span><span>Firebase</span><span>Flutter</span><span>TypeScript</span>
               <span>Tailwind</span><span>Node.js</span><span>MongoDB</span>
             </p>
           </div>
@@ -355,8 +406,14 @@
             <h3>Freelancer</h3>
             <p class="meta">Freelance</p>
             <ul class="detail">
-              <li>Build web and mobile applications for clients using Next.js, React Native, and Flutter.</li>
-              <li>Deliver features across the interface, APIs, and data, including Firebase, Supabase, and OpenAI.</li>
+              <li>
+                Built EctoTrack’s frontend from scratch in React, Vite, and Firebase: inventory,
+                vehicles, purchasing, and the dashboard.
+              </li>
+              <li>
+                Shipped Ask Me Anything to the App Store (chat UI, OpenAI, RevenueCat). Also worked on
+                Dream Meaning PRO.
+              </li>
             </ul>
             <p class="tech">
               <span>Next.js</span><span>Vite</span><span>React Native</span>
@@ -372,8 +429,8 @@
             <h3>Junior Full Stack Developer</h3>
             <p class="meta">DigiApp Solutions · Full-time · On-site</p>
             <ul class="detail">
-              <li>Developed web and mobile applications using React, Node.js, and MongoDB.</li>
-              <li>Built responsive user interfaces and backend APIs to support application features.</li>
+              <li>Built and shipped web and mobile features with React, Node.js, and MongoDB.</li>
+              <li>Owned responsive UI work and REST APIs that powered those features end to end.</li>
             </ul>
             <p class="tech">
               <span>React.js</span><span>Next.js</span><span>React Native</span><span>Firebase</span>
@@ -387,8 +444,8 @@
             <h3>MERN Stack Intern</h3>
             <p class="meta">BNG Labs · Internship · Remote</p>
             <ul class="detail">
-              <li>Worked on web application features using React, Node.js, and MongoDB.</li>
-              <li>Collaborated with the development team to build and improve real-world applications.</li>
+              <li>Implemented product features on a live MERN stack with React, Node.js, and MongoDB.</li>
+              <li>Paired with the team on reviews, bug fixes, and day-to-day delivery.</li>
             </ul>
             <p class="tech">
               <span>React.js</span><span>Next.js</span><span>JavaScript</span><span>TypeScript</span>
@@ -429,11 +486,15 @@
         <p class="kicker">Projects · 03</p>
         <article class="project">
           <h3>Jadwa Investment</h3>
-          <p class="meta">Saudi fintech</p>
+          <p class="meta">Saudi fintech · DigiTrends</p>
           <p>
-            A Saudi app for Shariah-compliant investing. People see their portfolio, subscribe to funds
-            and redeem them, trade on the Saudi Exchange, move money in riyal and dollars, and open
-            statements.
+            Saudi app for Shariah-compliant investing — portfolio, fund subscribe and redeem, Saudi
+            Exchange trading, riyal and dollar transfers, and statements.
+          </p>
+          <p>
+            Built the web portal and React Native frontend: live prices and trading over SignalR, fund
+            flows, portfolio and statements, and multi-currency transfers. React.js, React Native,
+            SignalR.
           </p>
           <p class="links">
             <a href="https://portal.jadwa.com/">Web</a>
@@ -443,19 +504,27 @@
         </article>
         <article class="project">
           <h3>EctoTrack</h3>
-          <p class="meta">Construction</p>
+          <p class="meta">Construction · Freelance</p>
           <p>
-            For construction teams working across more than one site. Inventory, vehicles, and purchasing
-            stay in one place, so the site and the office look at the same records.
+            Inventory, vehicles, and purchasing in one place for construction teams across multiple
+            sites — so the site and the office share the same records.
+          </p>
+          <p>
+            Built the frontend from scratch: inventory, vehicles, purchasing, and the dashboard. React,
+            Vite, Firebase.
           </p>
           <p class="links"><a href="https://ectotrack.com/">Web</a></p>
         </article>
         <article class="project">
           <h3>Ask Me Anything</h3>
-          <p class="meta">AI assistant</p>
+          <p class="meta">AI assistant · Freelance</p>
           <p>
-            A chat app powered by OpenAI. It answers questions and writes essays, emails, and short copy,
-            with weekly, monthly, and yearly plans inside the app.
+            OpenAI chat app for answers, essays, emails, and short copy, with weekly, monthly, and
+            yearly plans in-app.
+          </p>
+          <p>
+            Built the chat UI and OpenAI integration, wired RevenueCat subscriptions, and shipped to the
+            App Store. Flutter, Firebase, OpenAI, RevenueCat.
           </p>
           <p class="links">
             <a href="https://apps.apple.com/us/app/ask-me-anything-ai-assistant/id1667766826">iOS</a>
@@ -463,10 +532,9 @@
         </article>
         <article class="project">
           <h3>Dream Meaning PRO</h3>
-          <p class="meta">AI</p>
+          <p class="meta">AI · Freelance</p>
           <p>
-            You write down a dream and the app explains the symbols with OpenAI. It also has a dream
-            dictionary and paid plans.
+            Log a dream and get symbol explanations via OpenAI, plus a dream dictionary and paid plans.
           </p>
           <p class="links">
             <a href="https://apps.apple.com/us/app/dream-meaning-pro/id6447387536">iOS</a>
@@ -474,10 +542,10 @@
         </article>
         <article class="project">
           <h3>Dono Volunteering</h3>
-          <p class="meta">Volunteering</p>
+          <p class="meta">Volunteering · DigiTrends</p>
           <p>
-            Connects students, nonprofits, and local businesses. A student can pick up donated food,
-            follow a route, and get their hours logged.
+            Connects students, nonprofits, and local businesses. Students pick up donated food, follow a
+            route, and log hours — with live location during delivery.
           </p>
           <p class="links">
             <a href="https://play.google.com/store/apps/details?id=com.dono">Android</a>
@@ -486,17 +554,20 @@
         </article>
         <article class="project">
           <h3>GI Connect</h3>
-          <p class="meta">Medical</p>
+          <p class="meta">Medical · DigiTrends</p>
           <p>
-            A website for gastroenterology professionals in Pakistan. Guidelines, lectures, research, and
-            a community for events and other people in the field.
+            Site for gastroenterology professionals in Pakistan — guidelines, lectures, research, and a
+            community for events and peers.
           </p>
           <p class="links"><a href="https://gi-connects.com/">Web</a></p>
         </article>
         <article class="project">
           <h3>Pharma Asia</h3>
-          <p class="meta">Conference</p>
-          <p>The companion app for the Pharma Asia conference. Visitors look up exhibitors, speakers, and sessions.</p>
+          <p class="meta">Conference · DigiTrends</p>
+          <p>
+            Companion app for Pharma Asia — exhibitors, speakers, and sessions so visitors can plan the
+            day.
+          </p>
           <p class="links">
             <a href="https://play.google.com/store/apps/details?id=com.pharmaasia">Android</a>
             <a href="https://apps.apple.com/us/app/pharma-asia/id6755405385">iOS</a>

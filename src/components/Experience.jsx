@@ -42,7 +42,9 @@ function durationFor(period) {
 
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <section id="experience" className="relative scroll-mt-24">
+      <div className="pointer-events-none absolute -bottom-8 -left-48 h-72 w-[36rem] rounded-full bg-[radial-gradient(circle,rgba(186,210,255,0.16),transparent_68%)] blur-3xl" />
+      <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
       <Reveal>
         <SectionHeading index="01" title="Experience" />
       </Reveal>
@@ -50,27 +52,27 @@ export default function Experience() {
         {site.experience.map((item, index) => (
           <li
             key={item.period + item.role}
-            className="group -mx-4 border-b border-line px-4 py-8 transition-all duration-500 ease-out last:border-b-0 hover:rounded-2xl hover:border-transparent hover:bg-white/[0.045] [&:has(+li:hover)]:border-transparent"
+            className="row-wash group -mx-4 border-b border-line px-4 py-8 transition-all duration-300 ease-out last:border-b-0 hover:rounded-2xl hover:border-transparent [&:has(+li:hover)]:border-transparent"
           >
             <Reveal
               delay={Math.min(index * 90, 280)}
               className="grid gap-2 sm:grid-cols-12 sm:gap-6"
             >
             <div className="sm:col-span-3">
-              <p className="text-sm text-white/70 transition duration-500 group-hover:text-white">
+              <p className="text-sm text-white/70 transition duration-300 group-hover:text-white">
                 {item.period}
               </p>
-              <p className="mt-1 text-sm text-white/45 transition duration-500 group-hover:text-white/70">
+              <p className="mt-1 text-sm text-white/45 transition duration-300 group-hover:text-white/70">
                 {durationFor(item.period)}
               </p>
             </div>
             <div className="sm:col-span-9">
-              <h3 className="text-xl transition duration-500 group-hover:text-white">{item.role}</h3>
+              <h3 className="text-xl transition duration-300 group-hover:text-white">{item.role}</h3>
               {item.place ? (
-                <p className="mt-1 text-muted transition duration-500 group-hover:text-cream">{item.place}</p>
+                <p className="mt-1 text-muted transition duration-300 group-hover:text-cream">{item.place}</p>
               ) : null}
               {item.detail.length ? (
-                <div className="mt-3 max-w-xl space-y-2 text-sm leading-relaxed text-muted transition duration-500 group-hover:text-cream/90">
+                <div className="mt-3 max-w-xl space-y-2 text-sm leading-relaxed text-muted transition duration-300 group-hover:text-cream/90">
                   {item.detail.map((line) => (
                     <p key={line}>{line}</p>
                   ))}
@@ -80,7 +82,7 @@ export default function Experience() {
                 {item.stack.map((tech) => (
                   <li
                     key={tech}
-                    className="rounded-full border border-white/15 px-2.5 py-1 text-xs text-white/70 transition duration-500 group-hover:text-white"
+                    className="rounded-full border border-white/15 px-2.5 py-1 text-xs text-white/70 transition duration-300 group-hover:border-white/30 group-hover:text-white"
                   >
                     {tech}
                   </li>
@@ -96,13 +98,13 @@ export default function Experience() {
           href={site.resume}
           target="_blank"
           rel="noreferrer"
-          className="group inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition duration-500 ease-out hover:-translate-y-0.5 hover:bg-white hover:text-black"
+          className="group inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white hover:text-black"
         >
           View resume
           <svg
             viewBox="0 0 16 16"
             aria-hidden="true"
-            className="h-3.5 w-3.5 -rotate-45 transition-transform duration-500 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            className="h-3.5 w-3.5 -rotate-45 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             fill="none"
             stroke="currentColor"
             strokeWidth="1.6"
@@ -112,6 +114,7 @@ export default function Experience() {
             <path d="M3 8h10M9 4l4 4-4 4" />
           </svg>
         </a>
+      </div>
       </div>
     </section>
   )
